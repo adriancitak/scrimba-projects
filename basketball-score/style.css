@@ -51,3 +51,8 @@ button {
     margin-top: 25px;
     font-family: 'MyFont';
 }
+
+button:hover {
+    cursor: pointer;
+    
+}
