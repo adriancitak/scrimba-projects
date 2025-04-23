@@ -12,17 +12,21 @@
     align-items: center;
     color: white;
     height: 100vh;
+    flex-direction: column;
   }
 
+.main {
+    display: flex;
+    gap: 100px;
+}
+
 .home-side{
-    margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .guest-side{
-    margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,3 +60,26 @@ button:hover {
     cursor: pointer;
     
 }
+
+@keyframes flash-yellow{
+    0%, 100% {border-color: yellow;}
+    50% {border-color:transparent;}
+}
+
+.flash-winner {
+    border: 3px solid yellow;
+    animation: flash-yellow 1s infinite;
+}
+
+.new-game {
+    width: 100px;
+    background-color: green;
+    border: none;
+}
+
+.new-game-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }

@@ -7,29 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="home-side">
-        <h1>HOME</h1>
-        <div class="box">
-            <p id="home-score">0</p>
+    <div class="main">
+        <div class="home-side">
+            <h1>HOME</h1>
+            <div class="box home-box">
+                <p id="home-score">0</p>
+            </div>
+            <div class="btns">
+                <button id="home-1">+1</button>
+                <button id="home-2">+2</button>
+                <button id="home-3">+3</button>
+            </div>
         </div>
-        <div class="btns">
-            <button id="home-1">+1</button>
-            <button id="home-2">+2</button>
-            <button id="home-3">+3</button>
+        <div class="guest-side">
+            <h1>GUEST</h1>
+            <div class="box guest-box">
+                <p id="guest-score">0</p>
+            </div>
+            <div class="btns">
+                <button id="guest-1">+1</button>
+                <button id="guest-2">+2</button>
+                <button id="guest-3">+3</button>
+            </div>
         </div>
     </div>
-    <div class="guest-side">
-        <h1>GUEST</h1>
-        <div class="box">
-            <p id="guest-score">0</p>
-        </div>
-        <div class="btns">
-            <button id="guest-1">+1</button>
-            <button id="guest-2">+2</button>
-            <button id="guest-3">+3</button>
-        </div>
-    </div>
-    
+    <div class="new-game-btn">
+        <button class="new-game">New Game</button>
     <script src="main.js"></script>
 </body>
 </html>
