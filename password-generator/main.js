@@ -6,10 +6,17 @@ const btn = document.querySelector('button');
 const leftPassword = document.querySelector('#left-password');
 const rightPassword = document.querySelector('#right-password');
 
+const slider = document.getElementById('length');
+const output = document.getElementById('length-value');
+
+slider.addEventListener('input', () => {
+    output.textContent = slider.value
+})
+
 
 function generatePassword(){
     const password = [];
-    for (let i = 0; i < 16; i++){
+    for (let i = 0; i < slider.value; i++){
         let num = Math.floor(Math.random() * characters.length);
         password.push(characters[num]);
     }
@@ -23,3 +30,5 @@ btn.addEventListener('click', () => {
     rightPassword.textContent = generatePassword();
 
 })
+
+

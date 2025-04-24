@@ -67,3 +67,21 @@ button:hover{
     margin-left: 25px;
 }
 
+
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    border: 8px;
+    color: white;
+    font-family: sans-serif;
+    
+}
+
+
+input[type="range"] {
+    accent-color: #4ADF86;
+    cursor: pointer;
+}
+
