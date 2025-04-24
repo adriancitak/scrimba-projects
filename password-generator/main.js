@@ -2,4 +2,24 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"];
 
 
-console.log('hi')
+const btn = document.querySelector('button');
+const leftPassword = document.querySelector('#left-password');
+const rightPassword = document.querySelector('#right-password');
+
+
+function generatePassword(){
+    const password = [];
+    for (let i = 0; i < 16; i++){
+        let num = Math.floor(Math.random() * characters.length);
+        password.push(characters[num]);
+    }
+
+    return password.join('');
+}
+
+
+btn.addEventListener('click', () => {
+    leftPassword.textContent = generatePassword();
+    rightPassword.textContent = generatePassword();
+
+})
