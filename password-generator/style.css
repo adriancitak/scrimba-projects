@@ -85,3 +85,23 @@ input[type="range"] {
     cursor: pointer;
 }
 
+.copies {
+    display: flex;
+}
+
+.left-copy, .right-copy {
+    height: 40px;
+    width: 210px;
+    border-radius: 7px;
+    margin-top: 35px;
+    background-color: #55F991;
+    color: #273549;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-shift {
+    margin-left: 25px;
+}
+

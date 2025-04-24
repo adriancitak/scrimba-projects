@@ -9,6 +9,9 @@ const rightPassword = document.querySelector('#right-password');
 const slider = document.getElementById('length');
 const output = document.getElementById('length-value');
 
+const leftCopy = document.querySelector('.left-copy');
+const rightCopy = document.querySelector('.right-copy');
+
 slider.addEventListener('input', () => {
     output.textContent = slider.value
 })
@@ -30,5 +33,24 @@ btn.addEventListener('click', () => {
     rightPassword.textContent = generatePassword();
 
 })
+
+
+leftCopy.addEventListener('click', () => {
+    const text = leftPassword.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        console.log('Copied: ', text);
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+    });
+});
+
+rightCopy.addEventListener('click', () => {
+    const text = rightPassword.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        console.log('Copied: ', text);
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+    });
+});
 
 
