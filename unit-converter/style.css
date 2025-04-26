@@ -4,4 +4,77 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: Inter, sans-serif
+}
+
+.top-container {
+    background-color: #6943FF;
+    color: white;
+    height: 285px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+input {
+    height: 80px;
+    width: 120px;
+    background-color: #6943FF;
+    color: white;
+    border: solid 1px #B295FF;
+    border-radius: 4px;
+    font-size: 58px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+    background-color: white;
+    color: #3D3D3D;
+    height: 40px;
+    width: 120px;
+    border: none;
+    margin-top: 25px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.bottom-container {
+    background-color: #1F2937;
+    color: white;
+    height: 450px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #CCC1FF;
+    font-weight: bold;
+}
+
+.box {
+    background-color: #273549;
+    height: 110px;
+    width: 500px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
 }
