@@ -27,3 +27,30 @@ const posts = [
         likes: 152
     }
 ]
+
+
+let likes = 21494
+
+const likeBtn = document.querySelector('#like-btn')
+const likeCount = document.querySelector('#like-count')
+let isLiked = false;
+
+if (!isLiked){
+    likeBtn.addEventListener('dblclick', () => {
+
+        if (!isLiked){
+            likes += 1
+            likeBtn.src = 'images/index.png'
+
+        } else {
+            likes -= 1
+            likeBtn.src ='images/icon-heart.png'
+        }
+        
+        likeCount.textContent = `${likes.toLocaleString()} likes`
+        isLiked = !isLiked
+
+
+    })
+}
+

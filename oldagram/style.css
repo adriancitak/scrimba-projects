@@ -90,3 +90,20 @@ main {
     filter: brightness(1.3);
     cursor: pointer;
 }
+
+.seperator {
+    height: 25px;
+    background-color: #EDEDED; 
+    margin-top: 35px;
+}
+
+.comment,
+.likes,
+.icons {
+    height: 30px;
+}
+
+.likes {
+    margin-top: 10px;
+}
+
