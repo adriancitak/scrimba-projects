@@ -31,7 +31,7 @@ const posts = [
 
 const postsContainer = document.getElementById('posts-container');
 
-posts.forEach(post => {
+posts.forEach((post,index) => {
     const postHTML = `
      
             <div class="container">
@@ -66,9 +66,47 @@ posts.forEach(post => {
             </div>
         <div class="seperator"></div>
     `
+    const postHTMLFinal = `
+     
+            <div class="container">
 
-    console.log(post.avatar)
-    postsContainer.innerHTML += postHTML;
+                <div class="user-info"> 
+                    <img src="${post.avatar}" alt="portrait of ${post.name}" class="user-img">
+                    <div class="user-container">
+                        <p class="name">${post.name}</p>
+                        <p class="location">${post.location}</p>
+                    </div>
+                </div>
+
+                <img src="${post.post}" alt="image of ${post.name}" class="post-img">
+
+                <div class="img-info">
+
+                    <div class="icons">
+                        <img src="images/icon-heart.png" alt="heart icon" id="like-btn">
+                        <img src="images/icon-comment.png" alt="comment icon">
+                        <img src="images/icon-dm.png" alt="direct message icon">
+                    </div>
+
+                    <div class="likes">
+                        <p id="like-count">${post.likes.toLocaleString()} likes</p>
+                    </div>
+
+                    <div class="comment">
+                        <p class="post-comment"><span class="username">${post.username} </span>${post.comment}</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="white-space"></div>
+    `
+
+    if (!(index === posts.length - 1)){
+        postsContainer.innerHTML += postHTML;
+    } else {
+        postsContainer.innerHTML += postHTMLFinal;
+    }
+
 })
 
 
@@ -78,26 +116,4 @@ posts.forEach(post => {
 
 
 
-const likeBtn = document.querySelector('#like-btn')
-const likeCount = document.querySelector('#like-count')
-let isLiked = false;
-
-if (!isLiked){
-    likeBtn.addEventListener('dblclick', () => {
-
-        if (!isLiked){
-            likes += 1
-            likeBtn.src = 'images/index.png'
-
-        } else {
-            likes -= 1
-            likeBtn.src ='images/icon-heart.png'
-        }
-
-        likeCount.textContent = `${likes.toLocaleString()} likes`
-        isLiked = !isLiked
-
-
-    })
-}
 
