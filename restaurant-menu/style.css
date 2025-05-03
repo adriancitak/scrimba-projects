@@ -1,8 +1,100 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Smythe', serif;
+    margin-left: 40px;
 }
+
+
+header {
+    background-image: url('images/burger.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 167px;
+    width: 600px;
+    color: white;
+    margin-bottom: 67px;
+
+}
+
+.header-info{
+    padding-left: 46px;
+    padding-top: 25px;
+}
+
+h1, p {
+    margin: 10px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 22px;
+}
+
+.food-card {
+    display: flex;
+    justify-content: space-between;
+    height: 140px;
+    width: 508px;
+    border-bottom: solid 1px #D2D2D2;
+    margin-bottom: 45px;
+}
+
+.card-left{
+    display: flex;
+}
+
+.food-title {
+    font-size: 28px;
+}
+
+.food-emoji {
+    font-size: 80px;
+    margin-left: 46px;
+}
+
+.food-info {
+    margin-left: 30px;
+}
+
+.ingredients {
+    color: #8B8B8B;
+    font-size: 16px;
+}
+
+.food-price {
+    font-size: 20px;
+}
+
+.atc-btn {
+    
+
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 200;
+    font-size: 32px;
+  
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    color: #3C3C3C;
+   
+
+
+  }
+
+
+
+
+
+
 
 .hidden {
     display: none;
 }
+
