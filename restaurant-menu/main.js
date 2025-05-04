@@ -53,19 +53,19 @@ itemsEl.addEventListener('click', (e) => {
 
 function renderCheckout(order){
 
-    if (!order){
+    if (!order.length){
         checkoutEl.innerHTML = ''
     } else {
         const itemHTML = order.map(food => {
             return `
 
-            <div class="food-checkout>
+            <div class="food-checkout">
                 <div class = "left-order">
-                    <p class = "food-checkout-name">${food.name}
-                    <button class = "remove">remove</button 
+                    <p class = "food-checkout-name">${food.name}</p>
+                    <button class = "remove">remove</button> 
                 </div>
                 <div class = "right-order">
-                    <p class="order-price">${food.price}</p>
+                    <p class="order-price">$${food.price}</p>
                 </div>
             </div>
             
@@ -79,13 +79,18 @@ function renderCheckout(order){
     
         const checkoutHTML = `
         
-        <div class="order-sec>
-            <h3>Your order</h3>
+        <div class="order-sec">
+            <div class="your-order">
+                <h3 id="your-order">Your Order</h3>
+            </div>
             ${itemHTML}
             <div class = "price">
                 <p>Total price:</p>
-                <p>${totalPrice}</p>       
-            </div>`
+                <p>$${totalPrice}</p>       
+            </div>
+            <button class="complete-order">Complete Order</button>
+        </div> `
+        
 
         checkoutEl.innerHTML = checkoutHTML;
     }
