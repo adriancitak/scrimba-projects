@@ -122,7 +122,7 @@ p {
     cursor: pointer;
   }
 
-  .price {
+  .total-price {
     display: flex;
     justify-content: space-between;
     border-top: solid black 2px;
@@ -141,6 +141,7 @@ p {
     border-radius: 4px;
     margin: 0 auto;
     width: 400px;
+    
     margin-bottom:50px;
     margin-top: 50px;
    
@@ -149,4 +150,98 @@ p {
 
 .complete-order:hover{
     cursor: pointer;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+
+    
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Payment */
+
+.payment-card{
+    height: 450;
+    width: 524px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+.payment-card input{
+    height: 50px;
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    border: solid 1px #757575;
+    size: 24px;
+    border-radius: 5px;
+    padding-left: 25px;
+}
+
+.payment-card p {
+    margin-bottom: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.payment-card button{
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #16DB99;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 400px;
+    
+    margin-bottom:50px;
+}
+
+.payment-card button:hover{
+    cursor: pointer;
+}
+
+.payment-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    background-color: white;
+
+}
+
+
+
+/* Thank you section */
+
+#order-confirmation {
+    height: 50px;
+    font-size: 32px;
+    margin: 0 auto;
+    width: 400px;
+    background-color: #ECFDF5;
+    color: #065F46;
+    text-align: center;
+    padding: 30px 50px;
+    margin-bottom: 40px;
+
 }

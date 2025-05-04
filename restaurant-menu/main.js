@@ -2,7 +2,10 @@ import { menuArray } from "/data.js"
 
 
 const itemsEl = document.querySelector('.items');
-const checkoutEl = document.querySelector('.checkout')
+const checkoutEl = document.querySelector('.checkout');
+const paymentEl = document.querySelector('#modal-root');
+const overlayEl = document.querySelector('#overlay')
+const orderMessageEl = document.querySelector('#order-confirmation')
 
 // check if anything is added to cart isAdded = bool
 // if added render the checkout 
@@ -56,13 +59,13 @@ function renderCheckout(order){
     if (!order.length){
         checkoutEl.innerHTML = ''
     } else {
-        const itemHTML = order.map(food => {
+        const itemHTML = order.map((food,index) => {
             return `
 
             <div class="food-checkout">
                 <div class = "left-order">
                     <p class = "food-checkout-name">${food.name}</p>
-                    <button class = "remove">remove</button> 
+                    <button class = "remove" data-index="${index}">remove</button> 
                 </div>
                 <div class = "right-order">
                     <p class="order-price">$${food.price}</p>
@@ -75,7 +78,6 @@ function renderCheckout(order){
         }).join('')
 
         const totalPrice = order.reduce((acc, num) => acc + num.price, 0);
-        console.log(totalPrice)
     
         const checkoutHTML = `
         
@@ -84,7 +86,7 @@ function renderCheckout(order){
                 <h3 id="your-order">Your Order</h3>
             </div>
             ${itemHTML}
-            <div class = "price">
+            <div class = "total-price">
                 <p>Total price:</p>
                 <p>$${totalPrice}</p>       
             </div>
@@ -93,9 +95,75 @@ function renderCheckout(order){
         
 
         checkoutEl.innerHTML = checkoutHTML;
+       
     }
+}
 
+function paymentPage(){
 
-    
+    const paymentHMTL = `
+        <div class="payment-card">
+            <p>Enter card details</p>
+            <input type="text" name="holder-name" id = "holder-name" placeholder = "Enter your name" required>
+            <input type="text" inputmode="numeric" name="card-number" id = "card-number" placeholder = "Enter card number" required>
+            <input type="text" inputmode="numeric" name="card-cvv" id = "card-cvv" placeholder = "Enter CVV" required>
+            <button id="pay">Pay</button>
+        </div>
+        `
+
+        paymentEl.innerHTML = paymentHMTL;
+
 
 }
+
+
+checkoutEl.addEventListener('click', (e) => {
+    const removeBtn = e.target.closest(".remove")
+    const orderBtn = e.target.closest('.complete-order')
+  
+
+    if (removeBtn){
+        const itemIndex = parseInt(removeBtn.dataset.index)
+        order.splice(itemIndex, 1);
+        renderCheckout(order)
+    }
+    if (orderBtn){
+        paymentPage()
+        overlayEl.classList.toggle('hidden')
+        paymentEl.classList.toggle('hidden')
+    }
+
+})
+
+
+function orderConfirmation(name){
+
+    if (!name.trim()){
+        name = 'Customer'
+    }
+
+    name = name.split(' ')[0].toUpperCase()[0] + name.split(' ')[0].slice(1)
+
+   
+
+    orderMessageEl.innerHTML = `
+        <p>Thanks, ${name}! Your order is on its way!
+    `
+
+}
+
+paymentEl.addEventListener('click', (e) => {
+    const payBtn = e.target.closest('#pay')
+    let name = ''
+
+    if (payBtn){
+        let name = document.getElementById("holder-name").value
+
+        overlayEl.classList.toggle('hidden')
+        checkoutEl.classList.toggle('hidden')
+        paymentEl.classList.toggle('hidden')
+        orderConfirmation(name)
+        orderMessageEl.classList.toggle('hidden')
+        
+    }
+})
