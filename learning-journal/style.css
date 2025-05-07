@@ -1,4 +1,155 @@
-html, body{
+* {
+    box-sizing: border-box;
+    max-width: 100%;
     padding: 0;
     margin: 0;
+}
+
+html, body{
+    font-family: "Source Sans 3";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* Header  */
+header {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    margin: 0 1.25rem;
+    padding-right: 3rem;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.header-logo span {
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.logo {
+    height: 24px;
+    width: auto;
+}
+
+
+
+
+
+/* Hero Section */
+
+.hero {
+    background-image: url(images/article-image-hero.png);
+    background-size: cover;
+    height: 18rem; 
+    color: #fff;
+    display: flex;
+}
+
+.hero-container {
+    margin-left: 1.25rem;
+    margin-top: 3rem;
+    width: 90%;
+}
+
+.hero-container span, .hero-container h1, .hero-container p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.hero-container span{
+    margin-bottom: 0.5rem;
+}
+
+/* Articles */
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.post {
+    width: 23rem;
+    margin: 2em 0;
+}
+
+
+.post span {
+    display: block;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 0.75rem;
+    height: 6.5rem;
+}
+
+
+
+
+/* Typogrophy */
+
+ul {
+    display: flex;
+    gap: 2.5em;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.hero-container p {
+    font-size: 1em;
+}
+
+.hero-container h1 {
+    font-size: 2em;
+}
+
+.hero-container span {
+    font-size: 0.75em;
+}
+
+.articles span {
+    font-size: 0.8rem;
+}
+
+.articles h2 {
+    font-size: 1.5em;
+}
+
+footer span{
+    color: #D7D7D7;
 }
