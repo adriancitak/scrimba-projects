@@ -84,6 +84,11 @@ header {
     
 }
 
+.post img {
+    width: 23rem;
+    height: auto;
+}
+
 .post {
     width: 23rem;
     margin: 2em 0;
@@ -152,4 +157,23 @@ li a {
 
 footer span{
     color: #D7D7D7;
+}
+
+
+/* Desktop Version */
+
+@media (min-width:768px){
+    .articles{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 26px;
+        padding: 0 2rem;
+        
+    }
+
+    .post {
+        width: 100%;
+    }
+
 }
