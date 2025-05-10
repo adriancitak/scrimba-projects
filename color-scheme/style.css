@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    margin-left: 2em;
+    margin-left: 0.5em;
 }
 
 header {
@@ -24,6 +24,8 @@ select {
     border-radius: 3px;
 }
 
+
+
 input {
     height: 2.625em;
     width: 4em;
@@ -32,7 +34,7 @@ input {
 
 button {
     height: 2.625em;
-    width: 7.6875em;
+    width: 10em;
     border: solid 1px #D1D5DB;
     border-radius: 3px;
     background-color: white;
@@ -66,4 +68,24 @@ main {
 #color-one, #color-two, #color-three, #color-four, #color-five {
     height: 85%;
     width: 100%;
+}
+
+#color-one {
+    background-color: #F55A5A;
+}
+
+#color-two {
+    background-color: #2B283A;
+}
+
+#color-three {
+    background-color: #FBF3AB;
+}
+
+#color-four {
+    background-color: #AAD1B6;
+}
+
+#color-five {
+    background-color: #A626D3;
 }
