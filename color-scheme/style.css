@@ -24,11 +24,10 @@ select {
     border-radius: 3px;
 }
 
-.top-color {
+input {
     height: 2.625em;
-    width: 3em;
-    background: #F55A5A;
-    border: solid 2px #D1D5DB;
+    width: 4em;
+    border: none;
 }
 
 button {
@@ -48,7 +47,8 @@ button:hover{
 .colors {
     height: 28.75em;
     width: 6.875em;
-    background-color: #F55A5A;
+    /* background-color: #F55A5A; */
+    position: relative;
     
 }
 
@@ -61,7 +61,9 @@ main {
     text-align: center;
 }
 
-.name {
-    margin-top: 30em;
-}
 
+
+#color-one, #color-two, #color-three, #color-four, #color-five {
+    height: 85%;
+    width: 100%;
+}
