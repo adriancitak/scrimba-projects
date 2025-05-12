@@ -28,8 +28,12 @@ async function fetchMovies() {
         detailedMovies.forEach(movie => {
 
             // add an if statement and rewrite the plot description to end with ... and read more. Make it clickable 
-            if (movie.Plot.length > 360){
-                movie.Plot = movie.Plot.slice(0, 360) + '...';
+            if (movie.Plot.length > 240){
+                movie.Plot = movie.Plot.slice(0, 240) + '...';
+            }
+
+            if (movie.Genre.split(',').length > 3){
+                movie.Genre = movie.Genre.split(',').slice(0,3).join(', ')
             }
                     
 
@@ -41,16 +45,15 @@ async function fetchMovies() {
                 </div>
                 <div class = "movie-right-side">
                     <div class ="title-and-rating">
-                        <p>${movie.Title}</p>
-                        <p>⭐ ${movie.imdbRating}</p>
+                        <p class="movie-title">${movie.Title}</p>
+                        <p class ="movie-rating"><img src="images/Icon (1).png"> ${movie.imdbRating}</p>
                     </div>
                     <div class = "runtime-genre-watchlist">
                         <p>${movie.Runtime}</p>
                         <p>${movie.Genre}</p>
-                        <button>Watchlist</button>
+                        <button><img src = "images/Icon.png">Watchlist</button>
                     </div>
-                        <p>${movie.Plot}</p>
-                        <p>${movie.Plot.length}</p>
+                        <p class="movie-plot">${movie.Plot}</p>
                 </div>
             </div>
 

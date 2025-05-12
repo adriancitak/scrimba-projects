@@ -15,13 +15,20 @@ body {
     flex-direction: column;
 }
 
+
+/* Empty Logo */
+
 main {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 30em;
-    margin-top: 50em;
+}
+
+.empty-logo {
+    text-align: center;
+    margin-top: 13.1875em;
 }
 
 /* Font Stylign */
@@ -45,6 +52,7 @@ h2 {
 
 input, button {
     height: 2.375em;
+    font-family: inherit;
 
 
 
@@ -95,12 +103,12 @@ button:hover {
 /* Movies */
 
 .movie-container {
-    height: 20em;
-    width: 90%;
+    height: 30em;
+    width: 95%;
     margin-bottom: 10em;
-    border: solid red 1px;
     display: flex;
     gap: 1em;
+    border: 2px solid red;
 }
 
 
@@ -117,13 +125,14 @@ button:hover {
 .movie-right-side {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     flex-grow: 1;
 }
 
 .title-and-rating {
     display: flex;
-    gap: 1em;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -134,23 +143,54 @@ button:hover {
 }
 
 .runtime-genre-watchlist button {
+  
     background-color: #121212;
     border: none;
     width: 5.8125rem;
     height: 1.25rem;
+    margin-top: 1rem;
 }
 
+.runtime-genre-watchlist img {
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-right: 0.25rem;
+}
 
 
 
 .movies {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: nowrap;
     width: 90%;
     font-size: 0.5rem;
+    margin-left: 2.75em;
 }
+
+.movie-title{
+    font-size: 1.125rem;
+}
+
+.movie-rating {
+    font-size: 0.75rem;
+}
+
+.runtime-genre-watchlist{
+    font-size: 0.75rem;
+
+}
+
+.movie-plot{
+    color: #A5A5A5;
+    font-size: 0.75rem;
+    
+
+}
+
+
+
 
 
 .hidden {
